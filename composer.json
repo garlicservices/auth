@@ -1,0 +1,25 @@
+{
+  "name": "garlic/auth",
+  "description": "JWT token authorization for Garlic services",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Evgeniy Ivashko",
+      "email": "e.ivashko@skins.services"
+    }
+  ],
+  "require": {
+    "symfony/symfony": "^4.0",
+    "lexik/jwt-authentication-bundle": "^2.4",
+    "lcobucci/jwt": "^3.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "AuthorizationBundle\\": "src/"
+    }
+  }
+}
