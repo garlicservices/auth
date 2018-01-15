@@ -5,7 +5,7 @@ Garlic Authorization bundle
 
 ### Installation
 
-####1. Run:
+#### 1. Run:
 
 ```bash
 $ composer require garlic/auth
