@@ -28,49 +28,25 @@ class User implements JWTUserInterface
     /**
      * @var string
      */
-    private $fullName;
-
-    /**
-     * @var string
-     */
-    private $btcAddress;
-
-    /**
-     * @var string
-     */
-    private $ethAddress;
-
-    /**
-     * @var string
-     */
-    private $eth;
+    private $userType;
 
     /**
      * JWTUser constructor.
      *
      * @param string $username
      * @param string $id
-     * @param string $fullName
-     * @param string $btcAddress
-     * @param string $ethAddress
-     * @param string $eth
+     * @param string $userType
      * @param array  $roles
      */
     public function __construct(
         $username,
         $id = null,
-        $fullName = null,
-        $btcAddress = null,
-        $ethAddress = null,
-        $eth = null,
+        $userType = null,
         array $roles = []
     ) {
         $this->username = $username;
         $this->id = $id;
-        $this->fullName = $fullName;
-        $this->btcAddress = $btcAddress;
-        $this->ethAddress = $ethAddress;
-        $this->eth = $eth;
+        $this->userType = $userType;
         $this->roles = $roles;
     }
 
@@ -88,10 +64,7 @@ class User implements JWTUserInterface
             return new self(
                 $username,
                 isset($payload['id']) ? (string) $payload['id'] : null,
-                isset($payload['full_name']) ? (string) $payload['full_name'] : null,
-                isset($payload['btc_address']) ? (string) $payload['btc_address'] : null,
-                isset($payload['eth_address']) ? (string) $payload['eth_address'] : null,
-                isset($payload['eth']) ? (string) $payload['eth'] : null,
+                isset($payload['user_type']) ? (string) $payload['user_type'] : null,
                 (array) $payload['roles']
             );
         }
@@ -151,38 +124,8 @@ class User implements JWTUserInterface
      *
      * @return string
      */
-    public function getFullName()
+    public function getUserType()
     {
-        return $this->fullName;
-    }
-
-    /**
-     * Get btc address
-     *
-     * @return string
-     */
-    public function getBtcAddress()
-    {
-        return $this->btcAddress;
-    }
-
-    /**
-     * Get eth address
-     *
-     * @return string
-     */
-    public function getEthAddress()
-    {
-        return $this->ethAddress;
-    }
-
-    /**
-     * Get eth
-     *
-     * @return string
-     */
-    public function getEth()
-    {
-        return $this->eth;
+        return $this->userType;
     }
 }
