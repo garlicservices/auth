@@ -26,7 +26,6 @@ JWT_USER_CLASS='Garlic\Auth\Security\User'
 ```
 
 ### Using
-
 #### 1. Make JWT token from the authorization service
 
 #### 2. Add JWT token to to request headers:
