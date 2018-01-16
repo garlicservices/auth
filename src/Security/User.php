@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthorizationBundle\Security\User;
+namespace Garlic\Auth\Security;
 
 use Lexik\Bundle\JWTAuthenticationBundle\Security\User\JWTUserInterface;
 use Symfony\Component\HttpKernel\Exception\NotAcceptableHttpException;
@@ -8,7 +8,7 @@ use Symfony\Component\HttpKernel\Exception\NotAcceptableHttpException;
 /**
  * Class JWTUser
  */
-class JWTUser implements JWTUserInterface
+class User implements JWTUserInterface
 {
     /**
      * @var string

@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AuthorizationBundle\\": "src/"
+      "Garlic\\Auth\\": "src/"
     }
   }
 }

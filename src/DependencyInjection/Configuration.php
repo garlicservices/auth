@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthorizationBundle\DependencyInjection;
+namespace Garlic\Auth\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

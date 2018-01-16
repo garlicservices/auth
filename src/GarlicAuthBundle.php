@@ -1,12 +1,12 @@
 <?php
 
-namespace AuthorizationBundle;
+namespace Garlic\Auth;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * Class AuthorizationBundle
  */
-class AuthorizationBundle extends Bundle
+class GarlicAuthBundle extends Bundle
 {
 }
