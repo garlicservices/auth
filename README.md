@@ -30,5 +30,7 @@ JWT_USER_CLASS='Garlic\Auth\Security\User'
 #### 1. Make JWT token from the authorization service
 
 #### 2. Add JWT token to to request headers:
-
+Example:
+```bash
 Authorization: Body.Of.Token
+```
