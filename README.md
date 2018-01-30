@@ -15,7 +15,7 @@ $ composer require garlic/auth
 
 ```bash
 # Required
-JWT_PUBLIC_KEY_PATH='%kernel.root_dir%/../path/to/public.pem' #By default is %kernel.root_dir%/../vendor/garlic/auth/src/Resources/jwt/public.pem
+JWT_PUBLIC_KEY_PATH='config/jwt/public.pem' 
 
 # Optional
 JWT_PRIVATE_KEY_PATH=''
@@ -50,8 +50,8 @@ security:
 #### 4. Add Lexik jwt bundle configuration (change lexik_jwt_authentication.yml):
 ```yaml
 lexik_jwt_authentication:
-    private_key_path: '%env(JWT_PRIVATE_KEY_PATH)%'
-    public_key_path:  '%env(JWT_PUBLIC_KEY_PATH)%'
+    private_key_path: '%kernel.project_dir%/%env(JWT_PRIVATE_KEY_PATH)%'
+    public_key_path:  '%kernel.project_dir%/%env(JWT_PUBLIC_KEY_PATH)%'
     pass_phrase:      '%env(JWT_PASSPHRASE)%'
     token_ttl:        '%env(JWT_TOKEN_TTL)%'
     user_identity_field: email
