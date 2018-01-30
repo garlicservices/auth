@@ -23,6 +23,11 @@ JWT_KEY_PASS_PHRASE='passPhrase'
 JWT_TOKEN_TTL='3600'
 JWT_USER_IDENTITY_FIELD='email'
 JWT_USER_CLASS='Garlic\Auth\Security\User'
+
+# User auth settings
+USER_ADMIN_USERNAME=admin
+USER_ADMIN_PASSWORD=securePassword
+USER_SERVICE_NAME=users
 ```
 
 #### 3. Add Security configuration (change packages/security.yml):
